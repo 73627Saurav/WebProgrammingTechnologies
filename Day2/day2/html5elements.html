@@ -1,20 +1,26 @@
 <html>
-    <body>
-        <form>
-        name: <input type="text" name="nm" id="nm"
-        required autofocus minlength="3" maxlength="8"><br>
-        mobile: <input type="text" name="mob" id="mob" pattern="\d{10}">
-        <br>
-        age: <input type="number" name="age" id="age" min="18" max="60"><br>
-        email: <input type="email" name="email" id="email"><br>
-        booking date: <input type="date" name="dt" id="bdt" min="2023-04-10"
-        max="2023-05-10">
-        week : <input type="week" name="w" id="w">
-        month : <input type="month" name="m" id="m">
-        Favorite color: <input type="color" name="c" id="c">
-        feedback : <input type="range" name="feedback" id="f" min="1" max="10">
+
+<body>
+    <form>
+        name: <input type="text" name="nm" id="nm" required autofocus minlength="3" maxlength="8"><br>
+        <!--autofocus is an attribute in HTML that can be used with the <input> tag to specify that a form control should automatically have focus when the page loads
+            This attribute is used to make the user experience more efficient, as it saves the user from manually selecting a form field to input data-->
         
+        mobile: <input type="text" name="mob" id="mob" pattern="\d{10}" required><br>
+        <!--The pattern attribute accepts a regular expression that the input value is checked against before it is submitted.
+            If the user attempts to enter anything other than 10 digits, the input field will not pass validation and the form will not be submitted.-->
+
+        age: <input type="number" name="age" id="age" min="18" max="60"><br>
+        <!--In HTML, the min and max attributes can be used with the <input> tag to specify a range of valid values for a numeric or date input field.-->
+
+        email: <input type="email" name="email" id="email"><br>
+        booking date: <input type="date" name="dt" id="bdt" min="2023-04-10" max="2023-05-10"><br>
+        week : <input type="week" name="w" id="w"><br>
+        month : <input type="month" name="m" id="m"><br>
+        Favorite color: <input type="color" name="c" id="c"><br>
+        feedback : <input type="range" name="feedback" id="f" min="1" max="10"><br>
         <button type="submit" name="btn" id="btn">submit</button>
     </form>
-    </body>
+</body>
+
 </html>

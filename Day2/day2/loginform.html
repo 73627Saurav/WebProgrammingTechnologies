@@ -1,30 +1,55 @@
 <html>
-    <head></head>
-    <body>
-        <div style="border:2px solid red; border-radius:10px;width:300px;margin:300px;padding:40px">
+
+<head></head>
+
+<body>
+    <div style="border:2px solid red; font-family: 'Courier New', Courier, monospace; border-radius:10px; width:300px; margin:300px; padding:40px">
+        <!--The padding attribute is a style attribute in HTML that specifies the amount of space between an element's content and its border.-->
         <form action="" method="post">
+            <!--The action attribute in HTML is used to specify the URL of the script or program that will process the form data submitted by the user. 
+                When a user submits a form, the browser sends the data to the URL specified in the action attribute using either the HTTP GET or POST method.-->
             <table>
                 <tr>
                     <td>user name :</td>
-                    <td><input type="text" name="uname" id="uname" placeholder="enter username"
-                        required minlength="3" maxlength="8"
-                        autofocus></td>
+                    <td><input type="text" name="uname" id="uname" placeholder="enter username" required minlength="3" maxlength="8" autofocus></td>
+                    <!--The placeholder attribute is a common attribute used in HTML input elements that provides a hint or example to the user of what 
+                        information should be entered in the field. The placeholder text usually appears as light grey or faint text within the input field itself, 
+                        and disappears as soon as the user starts typing.-->
                 </tr>
+                
                 <tr>
                     <td>password :</td>
                     <td><input type="password" name="pass" id="pass"></td>
                 </tr>
+                
                 <tr>
                     <td></td>
-                    <td><input type="button" name="btn" id="btn" value="Login">
-                        &nbsp;&nbsp;&nbsp; <input type="reset" name="btn" id="btn" value="Cancel"></td>
+                    <td>
+                        <input type="button" name="btn" id="btn" value="Login">
+                        &nbsp;&nbsp;&nbsp; 
+                        <input type="reset" name="btn" id="btn" value="Cancel">
+                    </td>
                 </tr>
             </table>
-             <br>
-            <br>
-            
         </form>
     </div>
-    </body>
+</body>
 
 </html>
+
+<!--text: A single-line text input field for general text input.
+password: A single-line text input field for entering passwords, where the text is masked.
+email: A single-line text input field for entering email addresses, with built-in validation for the email format.
+number: A single-line text input field for entering numeric values, with built-in validation for numeric input.
+checkbox: A checkbox input field that allows the user to select one or more options.
+radio: A set of radio buttons that allows the user to select one option from a group of options.
+select: A drop-down list that allows the user to select one option from a list of options.
+textarea: A multi-line text input field for longer text input.
+file: An input field for uploading files from the user's local computer.
+button: A basic button element that can be used to trigger a function or event when clicked.
+submit: A button element that is used to submit a form to a server.
+reset: A button element that is used to reset a form to its initial values.
+image: A button element that displays an image instead of text.
+link: An a (anchor) element that is styled like a button.
+
+-->
