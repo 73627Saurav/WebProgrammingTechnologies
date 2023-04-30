@@ -4,27 +4,54 @@
     <canvas id="mycanvas" name="c" width="200px" height="200px" style="border:4px solid red"></canvas>
     <script>
         var c = document.getElementById("mycanvas");
-        var ctx = c.getContext("2d"); 
+        var ctx = c.getContext("2d");
         // To obtain a reference to the CanvasRenderingContext2D interface, you can call the getContext() method on the <canvas> element and pass it the string "2d" as an argument. 
         // This will return an object that represents the 2D rendering context for the canvas.
         // The line of code var ctx = c.getContext("2d"); assigns this object to a variable called ctx, 
         // which you can then use to call the various methods of the CanvasRenderingContext2D interface to draw on the canvas.
-        
+
+        ctx.beginPath();
         ctx.moveTo(0, 0); // The line of code ctx.moveTo(0, 0); is used in JavaScript with the CanvasRenderingContext2D interface to specify the starting point for a new path on a canvas.
         ctx.lineTo(200, 100);
-        ctx.lineTo(100,100);
-        ctx.lineTo(100,200);
-        ctx.lineTo(0,0);
-        ctx.lineTo(200,200);
-        ctx.stroke();
-        
+        ctx.lineTo(100, 100);
+        ctx.lineTo(100, 200);
+        ctx.lineTo(0, 0);
+        ctx.lineTo(200, 200);
+        ctx.closePath();
+        ctx.strokeStyle = "blue";
+        ctx.lineWidth = 2;
+        ctx.stroke(); //stroke() method is a method of the CanvasRenderingContext2D interface in JavaScript that is used to render the current path on an HTML5 canvas with the current stroke style.
+
         ctx.beginPath();
-        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        // ctx.beginPath() method is used in JavaScript with the CanvasRenderingContext2D interface to begin a new path on a canvas.
+        // After calling beginPath(), you can use methods such as moveTo(), lineTo(), arc(), or quadraticCurveTo() to define the points or curves that make up the path.
+        ctx.arc(100, 100, 44, 0, 2 * Math.PI);
+        ctx.closePath();
         ctx.stroke();
-        
+
         ctx.font = "25px courier";
-        ctx.fillText("Hello World", 10, 50);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        // textAlign and textBaseline properties to center the text horizontally and vertically within the specified rectangle
+        ctx.fillStyle = 'red';
+        ctx.fillText('Hello, world!', 100, 100);
+        /* text: The text to be drawn on the canvas.
+        x: The x-coordinate of the starting point for the text.
+        y: The y-coordinate of the starting point for the text. */
     </script>
 </body>
 
 </html>
+
+<!-- moveTo(x, y): This method moves the drawing cursor to the specified point (x, y) without drawing a line. It sets the
+starting point for the next path segment.
+
+lineTo(x, y): This method draws a straight line from the current cursor position to the specified point (x, y), and
+moves the cursor to that point.
+
+arc(x, y, radius, startAngle, endAngle, anticlockwise): This method draws an arc with the center point at (x, y) and a
+radius of radius, starting from the angle startAngle and ending at endAngle, in the clockwise direction by default. The
+anticlockwise parameter is a Boolean that, when set to true, draws the arc in the counter-clockwise direction.
+
+quadraticCurveTo(cp1x, cp1y, x, y): This method draws a quadratic Bezier curve from the current cursor position to the
+point (x, y), using the control point (cp1x, cp1y) to define the curvature of the curve. -->

@@ -1,34 +1,49 @@
 <html>
-    <head>
-        <style>
-            div>p{
-                background-color: rgb(69, 69, 47);
-                color:red;
-                border:2px dashed green;
-            }
 
-            div p:nth-child(2){
-                border:2px solid blue;
-            }
-        </style>
-    </head>
-    <body>
-        <p>this is para1 in body tag</p>
-        <p>this is para1 in body tag</p>
-        <div>
-            <h1>this is h1</h1>
-            <p>this is para1 in div 1</p>
-            <h1>This is h1 in div</h1>
-            <p>this is para1 in div 1</p>
-        </div>
-        <div>
-            <p>this is para1 in div 1</p>
-            <p>this is para1 in div 1</p>
-            <article>
-                <p>this is p in article</p>
-                <p>this is p in article</p>
-                <p>this is p in article</p>
-            </article>
-        </div>
-    </body>
+<head>
+    <style>
+        div>p {
+            background-color: gold;
+            color: red;
+            border: 2px dashed green;
+        }
+
+        div p:nth-child(2) {
+            border: 2px solid blue;
+        }
+
+        article>p {
+            background-color: palegreen;
+        }
+
+        article>p:nth-child(3) {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <p>This is para 1 in body tag</p>
+    <p>This is para 2 in body tag</p>
+    
+    <div>
+        <h1>This is h1 in div 1</h1>
+        <p>This is para 3 in div 1</p> <!-- bg-gold, border-blue -->
+        <h1>This is h2 in div 1</h1>
+        <p>This is para 4 in div 1</p> <!-- bg-gold, border-dashed green -->
+    </div>
+    
+    <div>
+        <p>This is para 5 in div 2</p> <!-- bg-gold, border-dashed green -->
+        <p>This is para 6 in div 2</p> <!-- bg-gold, border-blue -->
+        
+        <article>
+            <p>This is para 7 in article</p> <!-- bg-palegreen -->
+            <p>This is para 8 in article</p> <!-- bg-palegreen, border-blue -->
+            <p>This is para 9 in article</p> <!-- bg-aqua -->
+        </article>
+    </div>
+
+</body>
+
 </html>
