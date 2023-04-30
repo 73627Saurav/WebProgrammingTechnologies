@@ -1,42 +1,65 @@
 <html>
-    <body>
-       <label for="nm">Name:</label>  
-       <input type="text" name="nm" id="nm" list="names" required><span style="color:red">*</span>
-       <datalist id="names">
-          <option value="Kishori"></option>
-          <option value="Revati"></option>
-          <option value="Rajan"></option>
-          <option value="Atharav"></option>
-          <option value="Tanaya"></option>
-       </datalist><br>
-       <label for="city">City:</label> 
-       <select name="city" id="city" size="3" multiple>
-        <option value="pune">pune</option>
-        <option value="mumbai">mumbai</option>
-        <option value="nashik">nashik</option>
-        <option value="nagpur" selected>nagpur</option>
-        <option value="jalgaon">jalgaon</option>
-        <option value="kolhapur">kolhapur</option>
-       </select><br>
-       <label>color:</label> 
-       <select name="color" id="color">
-          <option>---select one---</option>
-          <option value="red">red</option>
-          <option value="green">green</option>
-          <option value="blue">blue</option>        
-        </select>
-      
-        <label>gender</label>
-        
-            <input type="radio" name="gender" id="male" value="male" checked> 
-            <label for="male">Male</label>
-            <input type="radio" name="gender" id="female" value="female">
-            <label for="female">Female</label> <br>
-       
-         <input type="file" name="fn" id="fn"><br>
-         <input type="hidden" name="marks" id="marks" value="20">
-    
 
-       <button type="submit" name="btn" id="btn" value="submit">submit</button>
-    </body>
+<body>
+   <label for="nm">Name:</label>
+   <input type="text" name="nm" id="nm" list="names" required>
+   <span style="color:red">*</span>
+   <!--<list> attribute is used to associate an <input> element with a pre-defined list of options.-->
+   <!--<required> attribute is used to indicate that an input field must be filled out by the user before the form can be submitted-->
+   <!--<span> element does not change the meaning or content of the elements it contains, 
+      but it can be used to style or manipulate them as a group, it can be styled using 
+      CSS to change the font size, color, or other properties of the text it contains-->
+   <datalist id="names">
+      <option value="Kishori"></option>
+      <option value="Revati"></option>
+      <option value="Rajan"></option>
+      <option value="Atharav"></option>
+      <option value="Tanaya"></option>
+   </datalist>
+   <br>
+
+   <label for="city">City:</label>
+   <select name="city" id="city" size="3" multiple>
+      <!--size: Specifies the number of options that should be visible in the select element at one time.-->
+      <!--multiple: Specifies that multiple options can be selected in the select element unsing ctrl key.-->
+      <option value="pune">pune</option>
+      <option value="mumbai">mumbai</option>
+      <option value="nashik">nashik</option>
+      <option value="nagpur" selected>nagpur</option>
+      <option value="jalgaon">jalgaon</option>
+      <option value="kolhapur">kolhapur</option>
+   </select>
+   <br>
+
+   <label>Color:</label>
+   <select name="color" id="color">
+      <option>---select one---</option>
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="blue">blue</option>
+   </select>
+   <br>
+
+   <label>Gender</label>
+   <input type="radio" name="gender" id="male" value="male" checked>
+   <!--<checked> attribute is used with an <input> element of type 
+      radio or checkbox to pre-select the option when the page loads-->
+   <label for="male">Male</label>
+   <input type="radio" name="gender" id="female" value="female">
+   <label for="female">Female</label> 
+   <br>
+
+   <input type="file" name="fn" id="fn"><br>
+   <!--input element with type="file" creates a file upload control that allows users 
+      to select one or more files from their local device to upload to the server-->
+   
+   <input type="hidden" name="marks" id="marks" value="20">
+   <!--input element with type="hidden" creates an input field that is not visible on the web page, 
+      but is included in the form data that is submitted to the server. 
+      This is useful for passing data that you don't want the user to see or interact with, 
+      such as a session ID or a product ID-->
+
+   <button type="submit" name="btn" id="btn" value="submit">Submit</button>
+</body>
+
 </html>
