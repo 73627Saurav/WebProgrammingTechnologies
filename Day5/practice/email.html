@@ -1,0 +1,27 @@
+<head>
+    <script>
+        function validatedata(){
+            if(validateEmail())
+                alert("valid data: "+document.getElementById("email").value)
+            else
+                alert("invalid data: "+document.getElementById("email").value)
+        }
+
+        function validateEmail(){
+            if (/^[a-zA-Z0-9._%+-]+@(gmail|outlook|yahoo)\.com$/.test(document.getElementById("email").value))
+                return true
+            else
+                return false
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validatedata()">
+        <table>
+            <tr>
+                <td>Email Address*:</td>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
+        </table>
+    </form>
+</body>

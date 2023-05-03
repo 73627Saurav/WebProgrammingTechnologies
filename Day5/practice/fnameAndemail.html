@@ -1,0 +1,54 @@
+<head>
+    <script>
+        function validateData() {
+            var flagname = validateName("fname");
+            if (!flagname) {
+                var temp = document.getElementById("fname").value;
+                alert(temp);
+                alert(temp.length - 1);
+                alert("Invalid Data: " + temp.charAt(temp.length - 1));
+                var str = (temp.substring(0, temp.length - 1));
+                document.getElementById("fname").value = str;
+            }
+
+            var flagemail = validateEmail();
+            if (flagemail) {
+                alert("Valid email: " + document.getElementById("email").value);
+            } else {
+                alert("Invalid email");
+            }
+        }
+
+        function validateName(fname) {
+            if (/^[a-zA-Z]+$/.test(document.getElementById("fname").value))
+                return true
+            else
+                return false
+        }
+
+        function validateEmail(){
+            if (/^[a-zA-Z0-9._%+-]+@(gmail|outlook|yahoo)\.com$/.test(document.getElementById("email").value))
+                return true
+            else
+                return false
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validateData()">
+        <table>
+            <tr>
+                <td>First Name*:</td>
+                <td><input type="text" id="fname" name="fname" value="" required autofocus></td>
+            </tr>
+            <tr>
+                <td>Email Address*:</td>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td> <button type="submit" name="submit" id="submit">submit</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
