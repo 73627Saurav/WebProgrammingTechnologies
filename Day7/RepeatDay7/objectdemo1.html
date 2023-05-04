@@ -1,0 +1,49 @@
+<head>
+    <script>
+        var varNumber = 169; //variable of type number with a value of 123
+        var varName = "Rema"; //variable of type string with a value of "rakesh"
+
+        // Create an object named object with properties and a method
+        var object = {
+            propertyId: 1532,
+            propertyName: "Rakesh",
+            propertyAddress: "Pune",
+            display: function () {
+                document.write(`${this.propertyId} ${this.propertyName} ${this.propertyAddress} `+"<br>");
+                document.write(this.propertyId + " " + this.propertyName + " " + this.propertyAddress+"<br>");
+            }
+        }
+
+        document.write(varName + "<br>"); // Write the value of varName to the document followed by a line break
+        document.write(varNumber + "<br>"); // Write the value of varNumber to the document followed by a line break
+        object.display(); // Call the display method of the object, which writes its properties to the document
+        
+        object.mobile=123456789;
+        document.write(object.mobile+"<br>");
+
+        document.write("<br>")
+
+        for (var v in object) {  // Loop through all properties of object
+            if (typeof(object[v]) !== "function") {  
+                // Check if property is not a function
+                // If property is not a function, display its name, value, and type in the document
+                document.write(`${v} = ${object[v]} ${typeof(object[v])}<br>`);
+                // For each property of object, the typeof operator is used to check whether the property value is a function or not. If the property value is not a function, the code inside the if block is executed.
+                // Inside the if block, the document.write() method is used to output the property name (v), its value (object[v]), and its type (typeof(object[v])) to the document. The <br> tag is used to insert a line break after each property.
+            }
+}
+    </script>
+</head>
+
+<!-- This code creates three variables: varNumber, varName, and object.
+
+varNumber is a variable of type number with a value of 123.
+
+varName is a variable of type string with a value of "rakesh".
+
+object is an object that has four properties:
+
+propertyId with a value of 123
+propertyName with a value of "Rakesh"
+propertyAddress with a value of "Pune"
+display, which is a function that writes the values of propertyId, propertyName, and propertyAddress to the document using the document.write() method. -->

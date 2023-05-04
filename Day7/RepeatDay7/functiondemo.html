@@ -1,0 +1,21 @@
+<head>
+    <script>
+        function f1(x){
+            alert("Hello, world!");
+            f2(x);
+        }
+
+        function f2(n){
+          document.write(n+"<br>");
+        }
+
+        function f3(...c){
+            console.log(c);
+            document.write(c+"<br>")
+        }
+
+        f1(100); // line of code f1(100) is simply calling a JavaScript function with an argument and we cannot determine its full impact without seeing the function's definition.
+        arr=[12,34,56,67];
+        f3(...arr);
+    </script>
+</head>

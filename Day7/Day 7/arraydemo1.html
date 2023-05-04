@@ -18,12 +18,12 @@
             [x,y,z,p=23]=arr;
 
             //the string using template operator
-            document.write(`x : ${x} y: ${y} z: ${z} p: ${p}`)
+            document.write(`x : ${x} y: ${y} z: ${z} p: ${p}`+"<br>")
             //array is big and we need only 1st 2 values
             var [x,y,...p]=arr;
-            document.write(`x : ${x} y: ${y}`)
-            var [,,x1,...p]=arr;
-            document.write(`x1:${x1}`);
+            document.write(`x : ${x} y: ${y}`+"<br>")
+            var [,,r,...p]=arr;
+            document.write(`r : ${r}`+"<br>");
             var [p=12,q=13,r=45]=[223];
         </script>
     </body>

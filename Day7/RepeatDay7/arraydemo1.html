@@ -1,0 +1,29 @@
+<head>
+    <script>
+        arr=[12,13,10,34]
+        arr1=[2,3,4,1,6]
+        arr2=[arr,arr1]
+        arr3=[...arr,...arr1]
+        
+        document.write("arr: "+arr+"<br>")
+        document.write("arr1: "+arr1+"<br>")
+        arr.push(100)
+        document.write("arr2: "+arr2+" length : "+arr2.length+"<br>")
+        document.write("arr3: "+arr3+ "length : "+arr3.length+"<br>")
+        
+        //The spread operator creates a new array with the elements from the arrays being spread, but it does not create a reference to the original arrays.
+        //since arr3 was created by spreading the elements of arr and arr1 before the push operation, it does not include the new element (100).
+        newarr3=[...arr,...arr1]
+        document.write("newarr3: "+newarr3+ " length : "+newarr3.length+"<br>")
+        //arr3 is a new array that contains the elements from arr and arr1 at the time it was created, but it is not updated automatically when the original arrays are modified
+    
+        var [x,y,z,p=23]=arr
+        //This line of code is creating four variables (x, y, z, and p) and assigning them values from the elements of arr using destructuring assignment. 
+        //The first three variables (x, y, and z) are assigned values from the first three elements of arr, while the fourth variable (p) is assigned a default value of 23, 
+        //which is used only if the fourth element of arr is undefined or missing.
+        document.write(`${x} ${y} ${z} ${p}`+"<br>")
+        
+        var [,,r,...q]=arr;
+        document.write(`${r} ${q}`+"<br>");
+    </script>
+</head>

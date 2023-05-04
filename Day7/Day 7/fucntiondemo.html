@@ -4,16 +4,20 @@
     <script>
         function f3(...c){
             console.log(c);
+            document.write(c+"<br>");
         }
         arr=[12,34,56,67];
         f3(...arr);
+        
         function f1(x){
             alert("hello");
             f2(x);
         }
+        
         function f2(n){
-          document.write(n);
+          document.write(n+"<br>");
         }
+        
         f1(100);
     </script>
 </head>

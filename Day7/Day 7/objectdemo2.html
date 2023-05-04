@@ -2,6 +2,7 @@
     <body>
         <script>
             //constructor function
+            //A constructor function called Person is created which takes three arguments: id, nm, and address. It sets the corresponding properties of the object using this keyword and also defines a display() function to display the object's properties.
             var Person=function(id,nm,address){
                 this.id=id;
                 this.name=nm;
@@ -10,27 +11,41 @@
                     document.write(`pid : ${this.pid} pname: ${this.pname} address: ${this.address} `)
                 }
             }
+
+            // Another constructor function called Manager is created which takes two arguments: mnm and mid.
             var Manager=function(mnm,mid){
                 this.mname=mnm;
                 this.mid=mid;
             }
+
+            // Two objects are created using the Person constructor function: p1 and p2.
             p1=new Person(12,'kishori','baner');
             p2=new Person(13,'Rajan','baner');
+           
+            //An object m1 is created using the Manager constructor function.
             m1=new Manager("Anil",1234);
+            
+            //The __proto__ property of m1 is set to p1, which means m1 inherits from p1.
             m1.__proto__=p1;
             document.write("<hr>")
+            
+            // A for loop is used to iterate over the properties of m1. If the property belongs to m1, it is considered as an own property; otherwise, it is inherited. The loop prints each property with its value and whether it is an own property or an inherited property.
             for(var p in m1){
                 //it will return true if p is its own property, false if it is
                 //inherited property
                 if(m1.hasOwnProperty(p)){
-                  document.write(`Own propery: ${p}-----${m1[p]}<br>`)
+                  document.write(`Own propery: ${p} = ${m1[p]}<br>`)
                 }else{
-                    document.write(`parent propery: ${p}-----${m1[p]}<br>`)
+                    document.write(`parent propery: ${p} = ${m1[p]}<br>`)
                 }
             }
             document.write("<hr>")
+            
+            // The display() function of Person is called for p1 and p2 objects to display their properties.
             p1.display();
             p2.display();
+            
+            // A new property mobile is added to p1 object and both p1 and p2 objects are printed to the console to verify the change.
             p1.mobile=23455;
             console.log(p1,p2);
         </script>

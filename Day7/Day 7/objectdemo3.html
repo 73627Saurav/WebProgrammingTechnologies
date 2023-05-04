@@ -1,11 +1,20 @@
 <html>
     <body>
         <script>
-        per={pid:12,pname:"kishori"};
-        mgr={mid:12,mname:"Rajan"};
-        // inherit properties of per in mgr
-        mgr.__proto__=per;
-        console.log(mgr);
+       // Define an object named "per" with two properties "pid" and "pname".
+       per = {pid: 12, pname: "kishori"};
+            // Define an object named "mgr" with two properties "mid" and "mname".
+            mgr = {mid: 11, mname: "Rajan"};
+            // Inherit properties of "per" into "mgr" using "__proto__".
+            mgr.__proto__ = per;
+            console.log(mgr);
+            document.write(`${mgr.mid} ${mgr.mname} ${mgr.pid} ${mgr.pname}`);
+
+        // The code defines two objects, per and mgr. per has two properties, pid and pname, while mgr has two properties, mid and mname.
+        // The line mgr.__proto__=per sets the prototype of mgr to per, which means that mgr inherits all the properties of per. In this case, mgr will inherit the properties pid and pname from per.
+        // The output of console.log(mgr) will show an object with three properties, mid, mname, and __proto__. The __proto__ property points to the prototype object per, which in turn has the properties pid and pname.
+        // Note that the use of __proto__ is generally discouraged in modern JavaScript, and it is recommended to use other methods such as Object.create() or class syntax to achieve inheritance.
     </script>
     </body>
 </html>
+
