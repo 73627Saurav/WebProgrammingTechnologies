@@ -1,0 +1,73 @@
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            background-color: #ffb6c1
+        }
+
+        th,
+        td {
+            border: 2px solid black;
+            padding: 5px;
+            width: 50%;
+            }
+    </style>
+</head>
+
+<body leftmargin="100px" topmargin="100px" >
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Employee Code</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td>
+                <input type="radio" name="Department" id="ADMIN"><label for="ADMIN">AD <br> </label>
+                <input type="radio" name="Department" id="HR"><label for="HR">HR <br> </label>
+                <input type="radio" name="Department" id="TECHNICAL"><label for="TECHNICAL">TECHNICAL <br> </label>
+                <input type="radio" name="Department" id="ACCOUNTS"><label for="ACCOUNTS">ACCOUNTS</label>
+            </td>
+
+
+        </tr>
+        <tr>
+            <td>Date of Joining</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><textarea name="Address" id="Address" style="width: 250px; height: 80px; overflow: auto;"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Training programs Attended</td>
+            <td>
+                <input type="checkbox" name="Programs" id="HTML/DHTML"><label for="HTML/DHTML">HTML/DHTML <br> </label>
+                <input type="checkbox" name="Programs" id="JAVA"><label for="JAVA">JAVA <br> </label>
+                <input type="checkbox" name="Programs" id="CLIENT/SERVER"><label for="CLIENT/SERVER">CLIENT/SERVER <br>
+                </label>
+                <input type="checkbox" name="Programs" id=".NET"><label for=".NET">.NET <br> </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Training Programmers need to attend</td>
+            <td>
+                <select name="Programs" id="Programs" size="2">
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                    <option value="JSTRUTS">JSTRUTS</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Send the informtion at</td>
+            <td><a href="empinfo@patni.com">empinfo@patni.com</a></td>
+        </tr>
+    </table>
+</body>

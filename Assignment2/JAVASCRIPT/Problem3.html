@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>List Even Numbers</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>List Even Numbers</h2>
+    
+    <form>
+        <label>Enter a number: <input type="number" name="num" id="num" min="1" required></label>
+        <button type="button" onclick="listEvenNumbers()">List Even Numbers</button>
+    </form>
+    
+    <div id="output"></div>
+</body>
+
+<script>
+    function listEvenNumbers() {
+        var num = document.getElementById("num").value;
+        var output = document.getElementById("output");
+        var i = 2;
+
+        output.innerHTML = "";
+        /* The line output.innerHTML = ""; is used to clear the contents of the output element before starting to list the even numbers.
+        This is important because the listEvenNumbers function is called every time the user clicks the "List Even Numbers" button. 
+        If we don't clear the output element before starting to list the numbers, the previous results will still be displayed along with the new ones. */
+
+        while (i <= num) { //This code creates a while loop that iterates from 2 up to and including the number num entered by the user.
+            var p = document.createElement("p"); //For each iteration of the loop, a new p element is created using document.createElement("p"), which creates an HTML p element.
+            console.log("Created new <p> element:", p);
+            
+            if (i % 2 === 0) { //Then, the if statement checks whether the current number i is even or not.
+                var text = document.createTextNode(i); // If i is even (i.e., its remainder when divided by 2 is zero), then the code creates a new text node with the value of i using document.createTextNode(i) and appends it to the p element using p.appendChild(text).
+                console.log("Created new text node with value", i, ":", text);
+                p.appendChild(text);
+                console.log("Appended text node to <p> element:", p);
+                output.appendChild(p); //p element is appended to the output element using output.appendChild(p)
+                console.log("Appended <p> element to output:", output);
+            }
+
+            i++;
+        }
+    }
+</script>
+
+</html>

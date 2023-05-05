@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr,td{
+            border: 1px solid black;
+            width: 50%;
+            padding: 2px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Feedback Form</h1>
+    <p>Please fill out this form to provide us with feedback on problems or difficulties you have faced while purchasing
+        items on our sports website.</p>
+
+    <table>
+        <form action="send_email.php" method="post">
+
+            <tr>
+                <td><label for="problem_type">Type of problem:</label></td>
+                <td> <select name="problem_type" id="problem_type" required>
+                        <option value="">-- Please select --</option>
+                        <option value="technical">Technical (e.g. website is down)</option>
+                        <option value="product_unavailable">Product not available</option>
+                        <option value="missing_info">Missing information about the product</option>
+                    </select><br></td>
+            </tr>
+
+            <tr>
+                <td> <label for="username">Username:</label></td>
+                <td> <input type="text" name="username" id="username" required><br></td>
+            </tr>
+
+            <tr>
+                <td> <label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email" required><br></td>
+            </tr>
+
+            <tr>
+                <td> <label for="location">Location:</label></td>
+                <td><input type="text" name="location" id="location" required><br></td>
+            </tr>
+
+            <tr>
+                <td><label for="phone">Phone:</label></td>
+                <td><input type="tel" name="phone" id="phone"><br></td>
+            </tr>
+
+            <tr>
+                <td><label for="description">Description of the problem:</label></td>
+                <td> <textarea name="description" id="description" rows="5" cols="30" required></textarea><br></td>
+            </tr>
+        
+        </form>
+    </table>
+    
+    <br>
+    <input type="checkbox" name="notify" id="notify" value="1">
+    <label for="notify">Notify me when the problem is solved</label><br>
+    <input type="submit" value="Submit">
+</body>
+
+</html>
