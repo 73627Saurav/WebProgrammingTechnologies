@@ -1,11 +1,20 @@
-<html>
-    <body>
-        <form action="/validate" method="get">
-            user name : <input type="text" name="uname" id="uname"><br>
-            password : <input type="password" name="pass" id="pass"><br>
-            
-            <button type="submit" name="btn" id="btn" value="login">Login</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/validate" method="get">
+        <label for="uname">Username:</label>
+        <input type="text" name="uname" id="uname"><br>
 
-        </form>
-    </body>
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass"><br>
+
+        <button type="submit" name="btn" id="btn" value="login">Login</button>
+    </form>
+</body>
 </html>

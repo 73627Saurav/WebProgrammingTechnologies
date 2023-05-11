@@ -1,11 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/submit-data" method="get">
+        <label for="n1">Number1:</label>
+        <input type="text" name="num1" id="n1"><br>
+
+        <label for="n2">Number2:</label>
+        <input type="text" name="num2" id="n2"><br>
+
+        <button type="submit" name="btn" id="btn1" value="add">Addition</button>
+        <button type="submit" name="btn" id="btn2" value="fact">Factorial</button>
+    </form>
+</body>
+<!-- 
+<form action="/register" method="get">
+The <form> tag is an HTML element used to create an interactive form that allows users to input data. 
+It is a container for various form elements such as input fields, buttons, checkboxes, and more.
+
+The action attribute specifies the URL or server-side script to which the form data will be submitted when the user submits the form. 
+In this case, the value of action is set to /register. 
+It means that when the form is submitted, the data will be sent to the /register endpoint on the server.
     
-    <body>
-        <form action="/submit-data" method="get" >
-            Number1 : <input type="text" name="num1" id="n1"><br>
-            Number2 : <input type="text" name="num2" id="n2"><br>
-            <button type="submit" name="btn" id="btn1" value="add">addition</button>
-            <button type="submit" name="btn" id="btn2" value="fact">Factorial</button>
-        </form>
-    </body>
-</html>
+The method attribute specifies the HTTP method used to send the form data to the server. 
+In this case, the value of method is set to get. 
+It means that the form data will be appended to the URL as query parameters when the form is submitted.
+So, when the user submits the form by clicking the "Register me" button, the browser will make a GET request to the /register URL, appending the form data as query parameters. 
+
+/register?name=John&addr=123%20Main%20Street&uname=john123&pass=password123
+For example, if the user enters "John" for the name, "123 Main Street" for the address, "john123" for the username, and "password123" for the password, the resulting URL would look like this:
+The server can then handle this request and extract the submitted data from the query parameters to process and respond accordingly.
+In summary, the <form> tag with the action and method attributes creates a form that, when submitted, sends the form data to the /register URL using the HTTP GET method. 
+The server can retrieve the submitted data from the query parameters to handle the registration process. -->
