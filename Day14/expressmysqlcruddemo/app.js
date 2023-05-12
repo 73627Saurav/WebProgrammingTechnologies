@@ -98,3 +98,19 @@ EJS is a popular templating engine that allows embedding JavaScript code within 
 By configuring the views directory and the view engine, Express is now able to render views using the specified template engine (EJS) and locate the view files in the "views" directory. 
 This enables the application to generate dynamic HTML responses by rendering the appropriate EJS templates with data.
 */
+
+/* 
+This line uses the app.use() method to define a middleware that handles requests to the "/css" URL path. It serves static files from the specified directory using the express.static() middleware.
+
+Here's a breakdown of the code:
+
+"/css": This is the URL path prefix for which the static file server is being set up. Any request that starts with "/css" will be handled by this middleware.
+
+express.static(): This function creates a middleware that serves static files. It takes the directory path as an argument and returns the middleware function.
+
+path.resolve(__dirname, "public/css"): This constructs the absolute path to the directory where the CSS files are stored. __dirname is a global variable in Node.js that represents the current directory of the script file. path.resolve() is used to resolve the absolute path by joining the __dirname with the relative path "public/css".
+
+By using express.static() middleware and specifying the "/css" URL path, the CSS files located in the "public/css" directory can be accessed by clients. For example, if there is a CSS file named "styles.css" inside the "public/css" directory, it can be accessed by requesting "/css/styles.css" in the browser.
+
+This allows the application to serve static CSS files that can be included in HTML templates to style the rendered views.
+*/
